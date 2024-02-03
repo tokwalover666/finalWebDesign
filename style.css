@@ -4,6 +4,7 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
+
     }
 
     header {
@@ -14,7 +15,7 @@
     }
 
     nav {
-        background-color: #444;
+        background-color: #000000;
         overflow: hidden;
     }
 
@@ -35,4 +36,15 @@
     .active {
         background-color: #555;
         color: #fff;
+    }
+
+    .home {
+        padding: 50px;
+        height: 500px;
+        border: 1px solid rgb(0, 0, 0);
+        background-image: url(assets/background.jpg);
+    }
+    h1 {
+        color: #ffee00;
+
     }

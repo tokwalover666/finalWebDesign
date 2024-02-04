@@ -3,7 +3,10 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+
+        background-image: url(assets/homeBackground.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
 
     }
 
@@ -38,13 +41,14 @@
         color: #fff;
     }
 
-    .home {
-        padding: 50px;
-        height: 500px;
-        border: 1px solid rgb(0, 0, 0);
-        background-image: url(assets/background.jpg);
+
+    h1, h2, a{
+        color: #ffffff;
+        font-weight: 200;
+        font-family: 'TT Ramillas Trl', sans-serif;
     }
     h1 {
-        color: #ffee00;
-
+        font-size: 100px;
+        font-weight: 400;
     }
+

@@ -1,54 +1,74 @@
 
     body {
-        font-family: Arial, sans-serif;
+
         margin: 0;
         padding: 0;
-
-        background-image: url(assets/homeBackground.jpg);
+        background-color: #7a1b1e;
+        background-image: url(assets/background.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
 
     }
 
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-    }
+    .header {
 
-    nav {
-        background-color: #000000;
-        overflow: hidden;
+        width: 100%;
+        border-bottom: 1px solid black;
+        text-align: right;
+        position: relative;
+        
+        .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.05vw;
+        font-weight: 400;
+        padding: 18px;
+        border-right: 1px solid black;
+        }
     }
-
-    nav a {
-        float: left;
-        display: block;
-        color: #fff;
-        text-align: center;
-        padding: 14px 16px;
+    
+    .link {
+        display: inline-block;
+        padding: 10px 0;
+        margin: 10px 20px;
+        position: relative;
         text-decoration: none;
+        color: #0f0f0f;
+        font-weight: 400;
+        font-size: 1.05vw;
+        
+        .bar {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 5px solid rgb(255, 255, 255);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 300ms;
+        }
+        
+        &:hover {
+        .bar {
+            opacity: 1;
+            bottom: 5px;
+        }
+        }
     }
 
-    nav a:hover {
-        background-color: #ddd;
-        color: #333;
-    }
 
-    .active {
-        background-color: #555;
-        color: #fff;
-    }
-
-
-    h1, h2, a{
+    h1, h2, .header, .link{
         color: #ffffff;
-        font-weight: 200;
+
         font-family: 'TT Ramillas Trl', sans-serif;
     }
+    h2 {
+        font-weight: 200;
+        font-size: 1vw;
+    }
     h1 {
-        font-size: 100px;
+        font-size: 3vw ;
         font-weight: 400;
     }
 

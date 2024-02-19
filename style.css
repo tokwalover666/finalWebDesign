@@ -86,17 +86,20 @@ body {
     padding-top: 10px;
 }
 .content-container{
-    width: 250px;
+    width: 300px;
     border: 2px solid black;
-    height: 300px;
+    height: 350px;
 
 
 }
 
 img{
-    width: 200px;
-
+    height: auto;
+    max-width: 100%;
+}
+.content-image {
+    background-repeat: no-repeat;
 }
 .content-image{
-    padding: 5px 0;
+    text-align: center;
 }

@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InterLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-$("#user-input").on("keyup", function() {
-var value = $(this).val().toLowerCase();
-$(".content-container").filter(function() {
-$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-});
-});
-});
-    </script>
+    
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
 </head>
+
 <body>
+    
     <nav>
         <div class="header">
             <div class="right-header">
                 <div class="logo">
-                    <a href="aboutUs.html" class="link">
+                    <a href="aboutUs.html" class="interlink">
                         <div class="title">
                         InterLink
                     </div>
@@ -30,120 +27,265 @@ $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 </div>
                 
                 <div class="search">
-                    <form id="demo-b">
-                        <input id="user-input" type="search" placeholder="Search">
+                    <form id="search-bar">
+                        <input id="user-input" type="search" placeholder="search...">
+                        <div class="filters">
+                            filter
+                            <div class="category-button" id="video-games">
+                                <button class="shrink-border">video games</button>
+                            </div>
+                            <div class="category-button" id="art"> 
+                                <button class="shrink-border">art</button>
+                            </div>
+                            <div class="category-button" id="technology">
+                                <button class="shrink-border">tech</button>
+                            </div>
+                        </div>
                     </form>
                     
                 </div>
+                
             </div>
-            
+            <div class="post-item">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" id="mainIconPathAttribute"></path> </svg>
+                </a>
+                
+            </div>
             <div class="menu">
-            <a href="#" class="link">
-                <svg style="color: rgb(119, 119, 119);" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16"> <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" fill="rgb(119, 119, 119)"></path> </svg>
-                <div class="bar"></div>
+                
+            <a href="#" class="user">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 12a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7z"/> </g> </svg>
             </a>
-            <a href="logInReg.html" class="link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart2"viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path fill="rgb(119, 119, 119)" d="M12 17c3.662 0 6.865 1.575 8.607 3.925l-1.842.871C17.347 20.116 14.847 19 12 19c-2.847 0-5.347 1.116-6.765 2.796l-1.841-.872C5.136 18.574 8.338 17 12 17zm0-15a5 5 0 0 1 5 5v3a5 5 0 0 1-4.783 4.995L12 15a5 5 0 0 1-5-5V7a5 5 0 0 1 4.783-4.995L12 2zm0 2a3 3 0 0 0-2.995 2.824L9 7v3a3 3 0 0 0 5.995.176L15 10V7a3 3 0 0 0-3-3z"/> </g> </svg>
-            <div class="bar"></div>
-            </a>
-            
-            
-            
-            </div>
         </div>
     </nav>
-    <div class="filter-category-container">
-        <div class="categories">
-            <div class="category-button" id="video-games">
-                <button class="shrink-border">video games</button>
+
+    <div id="myModal" class="modal">
+        
+        <div class="modal-content">
+            <div class="pageCenter">
+                
+                
+                <div class="container" id="container">
+                    <div class="close-span">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                    </div>
+                    
+                    <form class="sign-in-container">
+                        <h1>Sign In or Register</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        </div>
+                        <span class="form-span">or use your email and password</span>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <a href="#">→ Forgot Your Password? ←</a>
+                        <button>Sign In</button>
+                        <span class="form-span">not have account yet?</span>
+                        <button>Sign Up</button>
+                    </form>
+                </div>
             </div>
-            <div class="category-button" id="art"> 
-                <button class="shrink-border">art</button>
-            </div>
-            <div class="category-button" id="technology">
-                <button class="shrink-border">tech</button>
+            <div class="password-validator">
+                <div class="aro-pswd_info">
+                    <div id="pswd_info">
+                        <h4>Password must meet the following:</h4>
+                        <ul>
+                            <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+                            <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+                            <li id="number" class="invalid">At least <strong>one number</strong></li>
+                            <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+                            <li id="space" class="invalid">Atleast<strong> one [~,!,@,#,$,%,^,&,*,-,=,.,;,']</strong></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="directory">
+        <div><a href="home.html">Recommended for you ></a>
+            </div>
+    </div>
+
+
+    <div class="directory">
+        <div><a href="home.html">Explore ></a>
+            </div>
+    </div>
+
+
     <div class="products">
 
         <div class="content-container">
-            <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">
-                
+            <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
             </div>
-            <div class="content-title">
-                <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h3>
-            </div>
-            <div class="content-price">
-                <h2>PHP 6,000</h2>
-            </div>
-            <div class="content-seller">
-                <h3>seller</h1>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 6,000</h2>
+                </div>
             </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/ps5.jpg); background-size: 200%; height: 280px;">
-
             </div>
-            <div class="content-title">
-                <h1>PS5 slim 1tb RUSH!</h1>
-            </div>
-            <div class="content-price">
-                <h2>PHP 22,000</h2>
-            </div>
-            <div class="content-seller">
-                <h3>seller</h3>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
             </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/baldurs_gate_3.jpg); background-size: 100%; height: 280px;">
             </div>
-            <div class="content-title">
-                <h1>Baldurs Gate 3</h1>
-            </div>
-            <div class="content-price">
-                <h2>PHP 1,800</h2>
-            </div>
-            <div class="content-seller">
-                <h3></h3>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
             </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/kaworu_nagisa_eva_1.jpg); background-size: 100%; height: 280px;"></div>
-            <div class="content-title">
-                <h1>Kaworu</h1></div>
-            <div class="content-seller">
-                <h2>PHP 800</h2></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/evangelion_shinji_ikari_plus_c.jpg); background-size: 100%; height: 280px;"></div>
-            <div class="content-title">
-                <h1>Shinji NGE Plush</h1>
-            </div>
-            <div class="content-seller">
-                <h2>PHP 600</h2>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
             </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/neon_genesis_evangelion_unit_1.jpg); background-size: 100%; height: 280px;"></div>
-            <div class="content-title">
-                <h1>Neon Genesis Evangelion Unit 13</h1>
-            </div>
-            <div class="content-seller">
-                <h2>PHP 500</h2>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
             </div>
         </div>
         <div class="content-container">
             <div class="content-image" style="background-image: url(assets/sale_evangelion_keyboard.jpg); background-size: 200% ; height: 280px;"></div>
-            <div class="content-title">
-                <h1>Evangelion Keyboard</h1>
-            </div>
-            <div class="content-seller">
-                <h2>PHP 700</h2>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
             </div>
         </div>
-        
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(assets/evangelion_shinji_ikari_plus_c.jpg); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(assets/neon_genesis_evangelion_unit_1.jpg); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(assets/sale_evangelion_keyboard.jpg); background-size: 200% ; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(); background-size: 200% ; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 700</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 600</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-image" style="background-image: url(); background-size: 100%; height: 280px;"></div>
+            <div class="info-container">
+                <div class="content-title">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div class="content-seller">
+                    <h2>PHP 500</h2>
+                </div>
+            </div>
+        </div>
     </div>
-
+    <script src="main.js"></script>
 </body>
+
 </html>

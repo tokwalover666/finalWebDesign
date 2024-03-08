@@ -494,9 +494,10 @@ color:#fff;
   background-color: #fff;
 border: 1px solid rgb(205, 205, 205);
 color: #000000;
-left: 60vw;
-position: absolute;
-top: 26.5vh;
+
+position: fixed;
+top: 27%; 
+left: 53%;
 }
 #pswd_info h4{
 

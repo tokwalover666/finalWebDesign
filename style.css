@@ -279,6 +279,10 @@ margin: 70px 170px;
     padding-top: 10px;
     flex-wrap: wrap;
 }
+.custom-card {
+  margin: 0.75rem; 
+  border: 1px solid #020303; 
+}
 .content-container{
     width: 300px;
     flex-wrap: wrap;

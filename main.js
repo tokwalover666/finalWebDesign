@@ -83,4 +83,15 @@ $(function(){
     });
 });
 
+function start() {
+    gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+            client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+        });
+        });
+    }
+    
+    $('#googleSignIn').click(function() {
+        auth2.grantOfflineAccess().then(signInCallback);
+    });
 

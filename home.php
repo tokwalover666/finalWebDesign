@@ -79,6 +79,10 @@
                     </div>
                     <form class="sign-in-container" action="form.php" method="post">
                         <h1>Sign In or Register</h1>
+                        <div class="social-icons">
+                            <a id="googleSignIn" href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        </div>
+                        <span class="form-span">or use your email and password</span>
                         <!-- Your form fields and buttons -->
                         <input type="text" placeholder="Email" name="email">
                         <input type="password" placeholder="Password" id="passw" name="passw">
@@ -364,17 +368,22 @@
             <feTurbulence type="fractalNoise" baseFrequency="7.5"/>
         </filter>
     </svg>
-    </div>
+
     <footer class="footer">
         <div class="footer__container">
             <span><data>InterLink</data> // ©2024 All rights reserved.</span>
         </div>
     </footer>
 
-  
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-pzjw8V+Y1E1z0ZZxC0jwkqbsLoeJ48PTnYf5UK+9CRxlFi1jNHDvD6IyXipTiXHp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8BEAHjIc15Lw7Wqj4J8NnRSqzNBZD2N" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+    </script>
 </body>
 
 </html>

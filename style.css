@@ -637,3 +637,34 @@ padding-left: 22px;
   border-radius: 0;
   margin-bottom: 0;
 }
+
+.footer{
+  width: 100%;
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  border-top: 1px solid rgb(0, 0, 0);
+
+}
+
+.footer__container{
+
+  width: calc(100% - 16.66666%);
+  margin: 0 auto;
+  padding-left: 8.33333%;
+  padding-right: 8.33333%;
+  position: relative;
+  text-align: center;
+  
+  span{
+      font-size: 0.8rem;
+      display: block;
+      position: relative;
+      
+      data{
+          font-size: 0.8rem;
+          font-weight: 700;
+          position: relative;
+      }
+  }
+}

@@ -364,6 +364,13 @@
             <feTurbulence type="fractalNoise" baseFrequency="7.5"/>
         </filter>
     </svg>
+    </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <span><data>InterLink</data> // ©2024 All rights reserved.</span>
+        </div>
+    </footer>
+
   
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-pzjw8V+Y1E1z0ZZxC0jwkqbsLoeJ48PTnYf5UK+9CRxlFi1jNHDvD6IyXipTiXHp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8BEAHjIc15Lw7Wqj4J8NnRSqzNBZD2N" crossorigin="anonymous"></script>

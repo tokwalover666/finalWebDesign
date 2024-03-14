@@ -65,3 +65,22 @@ $(document).ready(function() {
 
 });
 
+$(function(){
+    var regExp = /^[a-zA-Z0-9._%+-]+@ciit\.edu\.ph$/;
+
+    $('[type="email"]').on('keyup', function() {
+        $('.message').hide();
+        regExp.test($(this).val()) ? $('.message.success').show() : $('.message.error').show();
+    });
+
+    $('form').submit(function(event) {
+        var emailInput = $(this).find('input[name="email"]');
+        if (!regExp.test(emailInput.val())) {
+            event.preventDefault(); 
+            alert('Please enter your CIIT email');
+            emailInput.focus();
+        }
+    });
+});
+
+

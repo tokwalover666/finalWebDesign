@@ -79,13 +79,16 @@
                     </div>
                     <form class="sign-in-container" action="form.php" method="post">
                         <h1>Sign In or Register</h1>
-
+                        
                         <div class="social-icons">
                             <a id="googleSignIn" href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                         </div>
-
-                        
                         <span class="form-span">or use your email and password</span>
+
+                        <?php if(isset($_GET['error'])) { ?>
+                            <p class="error"> <?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        
                         <!-- Your form fields and buttons -->
                         <input type="text" placeholder="Email" name="email">
                         <input type="password" placeholder="Password" id="passw" name="passw">

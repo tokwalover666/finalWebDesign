@@ -228,7 +228,10 @@ margin: 70px 170px;
   margin-left: 11vw;
 }
 
-
+#carousel{
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
 
 
 
@@ -260,6 +263,13 @@ margin: 70px 170px;
     }
     .filter-category-container{
         height: 250px;
+  }
+  .product-box{
+    
+  }
+  .product-image{
+    
+    width: 100%;
   }
 }
 
@@ -316,17 +326,47 @@ h3, .list-group-flush {
 }
 
 
+/****************** product details******************** */
+
+
+.product-box-container{
+
+  border: 1px solid black;
+  width: 100%;
+
+}
+
+.product-box{
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.product-image{
+  height: 85vh;
+  border: 2px solid black;
+  width: 900px;
+
+}
+
+.details-container{
+  margin-top: 20vh;
+  width: 20%;
+
+}
 
 
 
 
+/*********************sign up modal*********************/
+.error{
+  font-size: 20px;
+  color: red;
 
+}
 
-
-
-
-
-/**sign up modal***/
  .modal {
   display: none; 
   position: fixed; 

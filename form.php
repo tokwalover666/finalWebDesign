@@ -20,9 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($emailCount > 0) {
             echo "Email already exists. Please choose a different email.";
+            header ("Location: index.php?error=Email already exists!");
         } else {
             if (strlen($password) < 8 || !preg_match("#[0-9]+#", $password) || !preg_match("#[A-Z]+#", $password)) {
                 echo "Invalid password. It must be at least 8 characters long, contain at least one number, and one uppercase letter.";
+                header ("Location: index.php?error=Invalid email or password!");
             } else {
                 
                 $stmt = $conn->prepare("INSERT INTO profile (email, password) VALUES (?, ?)");
@@ -30,8 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if ($stmt->execute()) {
                     echo "Registered successfully!";
+                    header ("Location: index.php?=Login successful!");
                 } else {
                     echo "Error during registration: " . $stmt->error;
+                    header ("Location: index.php?error=Error during registration!");
                 }
 
                 $stmt->close();
@@ -56,16 +60,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
         } else {
             echo "Invalid email or password!";
-            header ("Location: home.php?error=Invalid email or password!");
+            header ("Location: index.php?error=Invalid email or password!");
         }
 
         if (empty($email)) {
-            header ("Location: home.php?error=Email is empty!");
+            header ("Location: index.php?error=Email is empty!");
 
             
         } else if (empty($password)) {
             echo "Invalid email or password!";
-            header ("Location: home.php?error=Password is empty!");
+            header ("Location: index.php?error=Password is empty!");
         }
 
         $stmt->close();

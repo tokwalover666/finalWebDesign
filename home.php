@@ -31,8 +31,11 @@
                 <div class="logo">
                     <a href="aboutUs.html" class="interlink">
                         <div class="title">
-                        InterLink
-                    </div>
+                        <div class="interlink-logo" style="background-image: url(assets/interlink-logo.png);width:100px;  background-size: 100px; height: 100px;background-repeat: no-repeat;">
+                            </div>
+                            InterLink
+                        </div>
+                        
                     </a>
                 </div>
                 
@@ -42,13 +45,16 @@
                         <div class="filters">
                             
                             <div class="category-button" id="video-games">
-                                <button class="shrink-border">video games</button>
+                                <button class="shrink-border">games</button>
                             </div>
                             <div class="category-button" id="art"> 
                                 <button class="shrink-border">art</button>
                             </div>
                             <div class="category-button" id="technology">
                                 <button class="shrink-border">tech</button>
+                            </div>
+                            <div class="category-button" id="others">
+                                <button class="shrink-border">others</button>
                             </div>
                         </div>
                     </form>
@@ -63,10 +69,20 @@
                 
             </div>
             <div class="menu">
-                
-            <a href="#" class="user">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 12a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7z"/> </g> </svg>
-            </a>
+                <div class="dropdown">
+                <a href="#" class="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 12a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7z"/> </g> </svg>
+                    <ul class="dropdown-nav">
+                        <li><a href="" class="user-hover-list">User</a></li>
+                        <li><a href="" class="user-hover-list">Messages</a></li>
+                        <li><a href="home.php" class="user-hover-list">Explore</a></li>
+                        <li><a href="add.html" class="user-hover-list">Post item</a></li>
+                        <li><a href="" class="user-hover-list">Saved</a></li>
+                        <li><a href="aboutUs.html" class="user-hover-list">Help Center</a></li>
+                        <li><a href="" class="user-hover-list">Settings</a></li>
+                    </ul>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -86,6 +102,9 @@
 
                         
                         <span class="form-span">or use your email and password</span>
+
+                        
+
                         <!-- Your form fields and buttons -->
                         <input type="text" placeholder="Email" name="email">
                         <input type="password" placeholder="Password" id="passw" name="passw">
@@ -124,42 +143,29 @@
         <ul class="flip-items">
             <li>
                 <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
+                    <div class="content-image" style="background-image: url(assets/baldurs_gate_3.jpg); background-size: 100%; height: 280px;">                
                     </div>
                     <div class="info-container">
                         <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
+                            <h1>Baldurs Gate 3</h1>
                         </div>
                         <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
+                            <h2>PHP 1,000</h2>
                         </div>
                     </div>
                 </div>
+            </li>
 
             <li>
                 <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
+                    <div class="content-image" style="background-image: url(assets/kaworu_nagisa_eva_1.jpg); background-size: 100%; height: 280px;">                
                     </div>
                     <div class="info-container">
                         <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
+                            <h1>Kaworu Nagisa Eva 1</h1>
                         </div>
                         <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-             </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
+                            <h2>PHP 200</h2>
                         </div>
                     </div>
                 </div>
@@ -178,142 +184,17 @@
                     </div>
                 </div>
             </li>
+
             <li>
                 <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
+                    <div class="content-image" style="background-image: url(assets/evangelion_shinji_ikari_plus_c.jpg); background-size: 100%; height: 280px;">                
                     </div>
                     <div class="info-container">
                         <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
+                            <h1>Shinji plushie</h1>
                         </div>
                         <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-            <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-            </div>
-            <div class="info-container">
-                <div class="card-title">
-                    <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                </div>
-                <div class="list-group-flush">
-                    <h2>PHP 6,000</h2>
-                </div>
-            </div>
-        </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
+                            <h2>PHP 200</h2>
                         </div>
                     </div>
                 </div>
@@ -345,7 +226,7 @@
             <div class="col-md-4 mb-4">
     <div class="card custom-card">
         <a class="product-link-page" href="product.html" target="_blank">
-        <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" class="card-img-top" alt="Product Image" style="height: 240px; width: 300px; ">
+        <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" class="card-img-top" alt="Product Image" style="height: 240px; width: 300px; border-bottom: 2px solid black; ">
         <div class="card-body">
             <h1 class="card-title"><?php echo $product['product_name']; ?></h1>
             <p class="card-text"><?php echo $product['description']; ?></p>

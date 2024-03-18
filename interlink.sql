@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2024 at 08:53 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Mar 18, 2024 at 02:25 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,9 +54,18 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `seller`, `product_name`, `price`, `description`, `quantity`) VALUES
-(1, 'mairah@yahoo.com', 'psvita', '250', 'psvita ni mairah', 1),
-(2, 'soba@yahoo.com', 'pika', '140', 'vaccinated', 1),
-(3, 'soba@yahoo.com', 'iphone', '176', 'sasabog n', 0);
+(1, 'mairah@yahoo.com', 'PS Vita', '250', 'psvita ni mairah', 1),
+(2, 'soba@yahoo.com', 'Pika', '140', 'vaccinated', 1),
+(3, 'soba@yahoo.com', 'Iphone', '176', 'sasabog n', 0),
+(4, 'soba@yahoo.com', 'Laptop', '500', 'laptop ni soba\r\nissue: mabagal', 1),
+(5, 'mairah@yahoo.com', 'Panasonic Headphones', '800', 'Used once', 1),
+(6, 'zari@yahoo.com', 'Iphone 8', '1000', 'goods pa\r\nrfs: may bago ng phone', 1),
+(7, 'soba@yahoo.com', 'Gameboy', '500', '', 1),
+(8, 'soba@yahoo.com', 'Final Fantasy Original CD\'s', '', 'price negotiable', 2),
+(9, 'mairah@yahoo.com', 'Sony Camcorder', '600', 'rfs: decluttering', 1),
+(10, 'zari@yahoo.com', 'New Balance 991', '1', 'for sale', 1),
+(11, 'soba@yahoo.com', 'Portable DVD Player', '300', 'bilhin niyo na', 1),
+(12, 'zari@yahoo.com', 'Sonny Angel', '500', 'Kewpie sonny angel', 3);
 
 -- --------------------------------------------------------
 
@@ -78,7 +87,8 @@ CREATE TABLE `profile` (
 INSERT INTO `profile` (`user_id`, `password`, `email`, `phonenumber`) VALUES
 (5, 'Asdasd123!', 'zari@yahoo.com', ''),
 (6, 'Asdasd123!', 'mairah@yahoo.com', ''),
-(7, 'Asdasd123!', 'soba@yahoo.com', '');
+(7, 'Asdasd123!', 'soba@yahoo.com', ''),
+(9, 'Asd!1asd', 'mairah.molina@ciit.edu.ph', '');
 
 --
 -- Indexes for dumped tables
@@ -121,13 +131,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.6/jquery.flipster.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.6/jquery.flipster.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -69,6 +71,9 @@
                 
             </div>
             <div class="menu">
+                <a href="home.php" class="home">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="IconChangeColor" height="23" width="23"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" id="mainIconPathAttribute"></path></svg>
+                </a>
                 <div class="dropdown">
                 <a href="#" class="user">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 12a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7z"/> </g> </svg>
@@ -104,9 +109,7 @@
                         
                         <span class="form-span">or use your email and password</span>
 
-                        <?php if(isset($_GET['error'])) { ?>
-                            <p class="error"> <?php echo $_GET['error']; ?></p>
-                        <?php } ?>
+                        
 
                         <!-- Your form fields and buttons -->
                         <input type="text" placeholder="Email" name="email">
@@ -136,122 +139,84 @@
         </div>
     </div>
 </div>
-    <div class="directory">
-        <div><a href="home.html">Recommended for you ></a></div>
-
-        
-    </div>
     
-    <div id="carousel">
-        <ul class="flip-items">
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/baldurs_gate_3.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Baldurs Gate 3</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 1,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/kaworu_nagisa_eva_1.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Kaworu Nagisa Eva 1</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 200</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/final_fantasy_xvi_ffxvi_deluxe.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Final Fantasy XVI (FFXVI) Deluxe PS5 - R3/Asia</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 6,000</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="content-container">
-                    <div class="content-image" style="background-image: url(assets/evangelion_shinji_ikari_plus_c.jpg); background-size: 100%; height: 280px;">                
-                    </div>
-                    <div class="info-container">
-                        <div class="card-title">
-                            <h1>Shinji plushie</h1>
-                        </div>
-                        <div class="list-group-flush">
-                            <h2>PHP 200</h2>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <script>
-        var carousel = $("#carousel").flipster({
-            style: 'carousel',
-            spacing: -0.5,
-
-        });
-    </script>
-
-
-    <div class="directory">
-        <div><a href="home.html">Explore ></a>
-            </div>
-    </div>
-
-
-    <div class="products">
-    
+<div class="product-box-container">
         <?php
-        include 'products.php';
-        foreach ($products as $product) {
-            ?>
-            <div class="col-md-4 mb-4">
-    <div class="card custom-card">
-        <a class="product-link-page" href="prod_page.php?id=<?php echo $product['product_id']; ?>" target="_blank">
-        <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" class="card-img-top" alt="Product Image" style="width: 100%; 
-  height: 280px; 
-  object-fit: cover;
-  object-position: 25% 25%;border-bottom: 2px solid black; ">
-        <div class="card-body">
-            <h1 class="card-title"><?php echo $product['product_name']; ?></h1>
-            <p class="card-text"><?php echo $product['description']; ?></p>
-        </div>
-        <ul class="list-group-flush">
-            <li class="list-group-item">Seller ID: <?php echo $product['seller']; ?></li>
-            <li class="list-group-item">Price: ₱<?php echo $product['price']; ?></li>
-            <li class="list-group-item">Quantity: <?php echo $product['quantity']; ?></li>
-        </ul>
-        <div class="card-body">
-            <h3>
-            <a href="#" class="card-link">Message seller</a>
-        </h3>
-        </div>
-    </a>
-    </div>
-</div>
+    // Check if the product ID is provided in the URL
+    if (isset($_GET['id'])) {
+        // Assuming you have already established a database connection
+        include 'products.php'; // Include the file with product data
 
-<?php } ?>
+        // Get the product ID from the URL
+        $productId = $_GET['id'];
+
+        // Find the product with the specified ID
+        $product = null;
+        foreach ($products as $p) {
+            if ($p['product_id'] == $productId) {
+                $product = $p;
+                break;
+            }
+        }
+
+        // Display product details if found
+        if ($product) {
+            ?>
+        <div class="product-box">
+            <div class="product-image">
+                <div class="image-container-inside">
+                    <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" alt="Product Image">
+                </div>
+            </div>
+            <div class="details-container">
+                <div class="details-title"><?php echo $product['product_name']; ?></div>
+                <div class="details-price">₱<?php echo $product['price']; ?></div>
+                <div class="caption-detail">Details</div>
+                <div class="details-desc"> <?php echo $product['description']; ?></div>
+                <div class="details-date">Posted: <div class="details-right">1 week ago</div></div>
+                <div class="details-seller">By: <div class="details-right"><?php echo $product['seller']; ?></div></div>
+                <div class="details-button">
+                    <div class="chat-button">
+                        <button onclick="openForm()">Chat</button>
+                    </div>
+                    <div class="seller-button">
+                    <a href="#">
+                    <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z" fill="#000000"></path> </svg>
+                    </a>
+                    </div>
+                </div>
+                
+                <div class="product-reviews" >Reviews</div>
+                <div class="product-reviews" >
+                    <ul>
+                        <li>1 star ka sakin lods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <?php
+        } else {
+            echo "Product not found.";
+        }
+    } else {
+        echo "Product ID not provided.";
+    }
+    ?>
+    </div>
+
+    <button class="open-button"onclick="openForm()">Msg</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container-chat">
+   <i class="fa-solid fa-chalkboard-user"></i> <h3>Seller <?php echo $product['seller']; ?></h3>
+
+    <label for="msg">Message</label>
+    <textarea placeholder="Still available?.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 
     <svg>
         <filter id="bg-filter">
@@ -264,7 +229,15 @@
             <span><data>InterLink</data> // ©2024 All rights reserved.</span>
         </div>
     </footer>
+    <script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    }
 
+    function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-pzjw8V+Y1E1z0ZZxC0jwkqbsLoeJ48PTnYf5UK+9CRxlFi1jNHDvD6IyXipTiXHp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8BEAHjIc15Lw7Wqj4J8NnRSqzNBZD2N" crossorigin="anonymous"></script>

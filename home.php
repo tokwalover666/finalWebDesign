@@ -75,6 +75,7 @@
                     <ul class="dropdown-nav">
                         <li><a href="" class="user-hover-list">User</a></li>
                         <li><a href="" class="user-hover-list">Messages</a></li>
+                        <li><a href="" class="user-hover-list">Groups</a></li>
                         <li><a href="home.php" class="user-hover-list">Explore</a></li>
                         <li><a href="add.html" class="user-hover-list">Post item</a></li>
                         <li><a href="" class="user-hover-list">Saved</a></li>
@@ -225,8 +226,11 @@
             ?>
             <div class="col-md-4 mb-4">
     <div class="card custom-card">
-        <a class="product-link-page" href="product.html" target="_blank">
-        <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" class="card-img-top" alt="Product Image" style="height: 240px; width: 300px; border-bottom: 2px solid black; ">
+        <a href="prod_page.php?id=<?php echo $product['product_id']; ?>" class="product-link-page" target="_blank">
+        <img src="assets/<?php echo strtolower(str_replace(' ', '_', $product['product_name'])); ?>.jpg" class="card-img-top" alt="Product Image" style="width: 100%; 
+  height: 280px; 
+  object-fit: cover;
+  object-position: 25% 25%;  border-bottom: 2px solid black; ">
         <div class="card-body">
             <h1 class="card-title"><?php echo $product['product_name']; ?></h1>
             <p class="card-text"><?php echo $product['description']; ?></p>

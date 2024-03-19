@@ -97,7 +97,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-
+    z-index: 999;
     a {
 
       font-size: 1rem;
@@ -165,6 +165,32 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+/***********************8 profile ***************/
+.profile-container{
+  padding-top: 50px;
+text-align: center;
+
+}
+
+.user-listings {
+
+  width: 300px;
+  flex-wrap: wrap;
+  border: 2px solid rgb(0, 0, 0);
+background-color: rgba(255, 255, 255, 0.7); 
+  height: 360px;
+  margin: 7px;
+
+}
+.user-card-body{
+  padding-left: 20px;
+}
+
+
+
+
+
   /*search bar*/
 
   input {
@@ -364,7 +390,7 @@
       padding-top: 10px;
       flex-wrap: wrap;
   }
-  .custom-card {
+  .custom-card{
     width: 300px;
     flex-wrap: wrap;
     border: 2px solid rgb(0, 0, 0);
@@ -412,6 +438,8 @@
   .product-link-page {
     text-decoration: none;
   }
+
+
 
 
   /****************** product details******************** */
@@ -543,7 +571,7 @@
 position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom as needed */
   right: 20px; /* Adjust the distance from the right as needed */
-
+  border: 2px solid black;
   z-index: 9999; /* Ensure the chat box appears on top of other elements */
  
 }
@@ -618,6 +646,17 @@ opacity: 0.8;
     overflow: auto; 
 
   }
+  .modalOpen{
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+  }
+
   .close {
     color: #000000;
     float: right;
@@ -943,6 +982,17 @@ opacity: 0.8;
       text-indent: 50px;
     
   }
+  .faks{
+    margin: 30px;
+    margin-top: 10vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+  .faks p{
+    margin-left: 40px;
+    text-indent: -40px;
+  }
+  
 /**************************** footer ***********************/
   .footer{
     width: 100%;

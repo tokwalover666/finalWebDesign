@@ -89,6 +89,56 @@
         </div>
     </nav>
 
+    <div id="myModal" class="modalOpen">
+    <div class="modal-content">
+            <div class="pageCenter">
+                <div class="container" id="container">
+                    <div class="close-span">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                    </div>
+                    <form class="sign-in-container" action="form.php" method="post">
+                        <h1>Sign In or Register</h1>
+
+                        <div class="social-icons">
+                            <a id="googleSignIn" href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        </div>
+
+                        
+                        <span class="form-span">or use your email and password</span>
+
+                        <?php if(isset($_GET['error'])) { ?>
+                            <p class="error"> <?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+
+                        <!-- Your form fields and buttons -->
+                        <input type="text" placeholder="Email" name="email">
+                        <input type="password" placeholder="Password" id="passw" name="passw">
+                        <a href="#">→ Forgot Your Password? ←</a>
+                        <button name="login" type="submit">Sign In</button>
+                        <span class="form-span">Don't have an account yet?</span>
+                        <!-- Added registration field -->
+                        <button name="register" type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <div class="password-validator">
+                    <div class="aro-pswd_info">
+                        <div id="pswd_info">
+                            <h4>Password must meet the following:</h4>
+                            <ul>
+                                <li id="letter" class="invalid">At least one letter</li>
+                                <li id="capital" class="invalid">At least one capital letter</li>
+                                <li id="number" class="invalid">At least one number</li>
+                                <li id="length" class="invalid">Be at least 8 characters</li>
+                                <li id="space" class="invalid">At least one [~,!,@,#,$,%,^,&,*,-,=,.,;,']</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                        </div>
     <div class="directory">
         <div><a href="home.html">Recommended for you ></a></div>
 
